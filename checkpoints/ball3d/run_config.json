@@ -1,0 +1,17 @@
+{
+  "train_path": "data/ball3d/ball3d_train.h5",
+  "val_path": "data/ball3d/ball3d_val.h5",
+  "output_dir": "checkpoints/ball3d",
+  "hidden_dim": 256,
+  "emb_dim": 64,
+  "n_blocks": 4,
+  "epochs": 80,
+  "steps_per_epoch": 200,
+  "batch_size": 128,
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "dagger_weight": 0.1,
+  "checkpoint_every": 10,
+  "seed": 0
+}

@@ -1,0 +1,41 @@
+name: shortcut_oregonator
+
+model:
+  type: shortcut_oregonator_2d
+  channels: 2
+  base_ch: 48
+  emb_dim: 64
+  ch_mults: [1, 2, 4, 4]
+
+dataset:
+  train: data/oregonator/oregonator_train.h5
+  val:   data/oregonator/oregonator_val.h5
+  base_dt: 0.05
+  T: 201
+  H: 256
+  W: 256
+  channels: 2
+
+horizon_set: [1, 2, 4, 8, 16, 32, 64]
+
+training:
+  # Memmap path: 400 trajectories in fp16 on disk; OS handles paging.
+  memmap_train_path: data/oregonator/oregonator_train_memmap.npy
+
+  batch_size: 8
+  samples_per_epoch: 5000
+  epochs: 60
+  patience: 15
+
+  lr: 2.0e-4
+  weight_decay: 1.0e-4
+  grad_clip: 1.0
+  warmup_epochs: 3
+  checkpoint_every: 5
+  seed: 0
+  dagger_prob: 0.10
+
+output_dir: checkpoints/oregonator
+
+wandb:
+  enabled: false

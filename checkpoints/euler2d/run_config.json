@@ -1,0 +1,36 @@
+{
+  "name": "shortcut_euler2d_dagger",
+  "model": {
+    "type": "shortcut_pde_2d",
+    "channels": 4,
+    "base_ch": 48,
+    "emb_dim": 64,
+    "ch_mults": [1, 2, 4, 4]
+  },
+  "dataset": {
+    "train": "data/euler2d/euler2d_train.h5",
+    "val": "data/euler2d/euler2d_val.h5",
+    "base_dt": 0.002,
+    "T": 100,
+    "H": 128,
+    "W": 128
+  },
+  "horizon_set": [1, 2, 4, 8, 16, 32, 64],
+  "training": {
+    "batch_size": 8,
+    "samples_per_epoch": 2000,
+    "epochs": 40,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "checkpoint_every": 5,
+    "seed": 0,
+    "dagger_weight": 0.1
+  },
+  "output_dir": "checkpoints/euler2d",
+  "wandb": {"enabled": false},
+  "runtime_seed": 0,
+  "shuffle_dt": false,
+  "smoke": false,
+  "dagger_weight": 0.1
+}

@@ -1,0 +1,16 @@
+<mujoco model="ball3d">
+  <option timestep="0.002" gravity="0 0 -9.81"/>
+
+  <worldbody>
+    <body name="ball" pos="0 0 0.5">
+      <freejoint name="ball_joint"/>
+      <geom name="ball_geom" type="sphere" size="0.05" mass="0.1"
+            rgba="0.8 0.2 0.2 1.0"
+            solref="0.005 -0.85"/>
+    </body>
+
+    <geom name="floor" type="plane" size="1 1 0.01" pos="0 0 0"
+          rgba="0.5 0.5 0.5 0.3"
+          solref="0.005 -0.85"/>
+  </worldbody>
+</mujoco>

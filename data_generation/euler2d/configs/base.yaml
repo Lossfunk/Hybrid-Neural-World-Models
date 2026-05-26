@@ -1,0 +1,10 @@
+# Base config shared across environments. Env-specific configs override
+# or extend these values.
+
+device: cuda                   # "cuda" or "cpu"; code should fall back if cuda unavailable
+num_workers: 2                 # DataLoader workers
+wandb:
+  project: hybrid-world-models
+  mode: disabled               # "disabled" | "online" | "offline"
+data_root: data                # base path for datasets
+seed_default: 42

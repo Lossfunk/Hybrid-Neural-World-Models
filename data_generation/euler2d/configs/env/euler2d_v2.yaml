@@ -1,0 +1,22 @@
+# 2D Euler v2: 4-channel state storage, mixed ICs.
+name: euler2d_v2
+state_dim: 65536          # 128*128*4
+action_dim: 0
+base_dt: 0.002
+trajectory_length: 100    # 100 * 0.002 = 0.2s total
+
+solver:
+  name: finite_volume_hll
+  params:
+    grid: [128, 128]
+    domain: [0.0, 1.0, 0.0, 1.0]
+    gamma: 1.4
+    cfl: 0.4
+    ic_name: random_mixture         # schulz_rinne_{3,4,6,12}, sedov, random_mixture
+    fixed_frame_dt: true
+
+event_detector:
+  name: undivided_difference
+  params:
+    field: pressure
+    threshold: 0.15
