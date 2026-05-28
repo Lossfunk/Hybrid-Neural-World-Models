@@ -112,6 +112,14 @@ python evaluation/ablations/error_head/train_and_eval_ball3d.py     # Ball 3D
   computation, metrics) live under `evaluation/oregonator_eval/` and are
   imported via `sys.path` from each ablation script.
 - Random seeds are fixed in every script; the canonical seed is 0. Seeds
+
+
+@article{lakshmanan2026hybrid,
+  title={Hybrid Neural World Models},
+  author={Lakshmanan, Pranav and Chopra, Paras},
+  journal={arXiv preprint arXiv:2605.28317},
+  year={2026}
+}
   1 and 2 are used for the cross-seed appendix runs; the corresponding
   checkpoints are not included to keep the supplement compact, but each
   trainer accepts a `--seed` argument that reproduces them.
