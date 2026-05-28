@@ -7,7 +7,7 @@ inference time. We evaluate on three physical systems: a 2D Oregonator
 reaction-diffusion PDE, the 2D compressible Euler equations, and a 3D rigid-body
 ball-in-box ODE.
 
-Paper on Arxiv - arxiv.org/abs/2605.28317
+Paper on Arxiv -[ arxiv.org/abs/2605.28317](https://arxiv.org/abs/2605.28317)
 
 ## Setup
 
