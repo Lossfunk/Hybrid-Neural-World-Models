@@ -7,15 +7,30 @@ inference time. We evaluate on three physical systems: a 2D Oregonator
 reaction-diffusion PDE, the 2D compressible Euler equations, and a 3D rigid-body
 ball-in-box ODE.
 
-Paper on Arxiv -[ arxiv.org/abs/2605.28317](https://arxiv.org/abs/2605.28317)
+**Accepted at NeurIPS 2026 (Main Track)** as *Hybrid Neural World Models for Physical Dynamics*.
 
-Citation - 
-@article{lakshmanan2026hybrid,
-  title={Hybrid Neural World Models},
-  author={Lakshmanan, Pranav and Chopra, Paras},
-  journal={arXiv preprint arXiv:2605.28317},
-  year={2026}
+- NeurIPS paper (OpenReview): [openreview.net/forum?id=uWsmvC2jq5](https://openreview.net/forum?id=uWsmvC2jq5)
+- Preprint (arXiv): [arxiv.org/abs/2605.28317](https://arxiv.org/abs/2605.28317)
+- Project page: [pranavlakshmanan.github.io/hnwm](https://pranavlakshmanan.github.io/hnwm/)
+
+Citation:
+
+```bibtex
+@inproceedings{lakshmanan2026hybrid,
+  title     = {Hybrid Neural World Models for Physical Dynamics},
+  author    = {Lakshmanan, Pranav and Chopra, Paras},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=uWsmvC2jq5}
 }
+
+@article{lakshmanan2026hybridpreprint,
+  title   = {Hybrid Neural World Models},
+  author  = {Lakshmanan, Pranav and Chopra, Paras},
+  journal = {arXiv preprint arXiv:2605.28317},
+  year    = {2026}
+}
+```
 
 ## Setup
 
@@ -47,7 +62,8 @@ neruips_final_code/
 ├── evaluation/
 │   ├── ablations/                 the eleven ablation experiments (code only)
 │   └── figures/                   paper figure / table builders
-└── checkpoints/                   one trained `best.pt` per environment, seed 0
+├── checkpoints/                   one trained `best.pt` per environment, seed 0
+└── camera_ready/                  NeurIPS 2026 camera-ready table / figure scripts (see camera_ready/README.md)
 ```
 
 ## Quick start
